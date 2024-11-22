@@ -1,0 +1,280 @@
+*{
+    padding: 0;
+    border: 0;
+    margin: 0;
+}
+/*ESTILO EN GENERAL SIN IMPORTAR EL DISPOSITIVO*/
+body{
+    background-color:#56BBE9;
+    background-image: linear-gradient(to bottom, #007DD1,#008EDA, #008EDA, #03A8E8, #56BBE9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+article{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 95%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    padding: 1rem 0;
+}
+#presentacion h2, a{
+    text-align: center;
+}
+#presentacion a{
+    background-color: rgb(128, 128, 194);
+    color: white;
+    text-decoration: none;
+}
+#presentacion a:hover{
+    background-color: rgb(88, 88, 161);
+}
+/*seccion proyectos*/
+.like:hover{
+    color: #FF6347; /* Color rojo cuando se pasa el ratón */
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+}
+#cambiarIdioma{
+    color: white;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    text-align: start;
+}
+#cambiarIdioma p, span{
+    font-size:larger;
+    text-align: start;
+}
+#cambiarIdioma p span:hover{
+    cursor: pointer; /* Cambia el cursor para indicar que es interactivo */
+}
+.proyecto h3:hover{
+    text-decoration: underline;
+}
+.proyecto p{text-align: start;}
+/*footer*/
+footer{
+    background-color: chocolate;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+footer h2, p{
+    text-align: center;
+}
+/*footer h2, p{
+    width: 90%;
+}*/
+#misProyectos h2{
+    margin-left: 1.3rem;
+}
+/*animacion de nubes*/
+/*.nube{
+    position: absolute;
+    background: url('../imagen/nube.png') repeat;
+    background-size: cover;
+    opacity: 0.7;
+    z-index: 1;
+    top: -100px;
+}*/
+.nube{
+    position: absolute;
+    background: url('../imagen/nube.png') ;
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+    top: 2vh;
+    width: 400px;
+    height: 150px;
+    left: -100px;
+    animation: movimientoNube 90s linear infinite;
+}
+.nube2{
+    position: absolute;
+    background: url('../imagen/nube.png');
+    background-size: cover;
+    transform: scaleX(-1);
+    opacity: 0.7;
+    z-index: -1;
+    top: 35vh;
+    width: 400px;
+    height: 150px;
+    right: -15vw;
+    animation: movimientoNube2 90s linear infinite;
+}
+@keyframes movimientoNube{
+    0%{
+        left: 0%;
+    }
+    100%{
+        left: 100%;
+    }
+}
+@keyframes movimientoNube2{
+    0%{
+        right: -15vw;
+    }
+    100%{
+        right: -100%;
+    }
+}
+.contenido{
+    position: relative;
+    z-index: 1;
+}
+/*animacion de las nubes*/
+/*PARA TELEFONOS*/
+@media all and (min-width: 320px) {
+    #presentacion figure{
+        width: 50%;
+        height: 30vh;
+        margin: 0 auto;
+        display: block;
+    }
+    #presentacion figure img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+    #presentacion a{
+        padding: 0.5rem 2rem;
+        border-radius: 1rem;
+        margin-top: 1rem;
+        display: block;
+    }
+    #presentacion section{
+        width: 95%;
+        margin: 0 auto;
+    }
+    #contenedorProyectos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .proyecto{
+        width: 90%;
+        overflow: hidden;
+    }
+    .proyecto figure{
+        width: 95%;
+        height: 20vh;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .proyecto figure img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .proyecto section{
+        width: 90%;
+        margin: 1rem auto;
+    }
+}
+/*PARA TABLETS*/
+@media all and (min-width: 700px){
+    #presentacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #presentacion figure{
+        width: 30%;
+        height: 30vh;
+        margin: 0 1rem;
+        overflow: hidden;
+    }
+    #presentacion section{
+        width: 60%;
+    }
+    #presentacion figure img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    #presentacion a{
+        width: 25%;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 1rem auto;
+    }
+    #contenedorProyectos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .proyecto{
+        width: 40%;
+    }
+    /*=========================*/
+    /*seccion conocimientos*/
+    .flechaIzq{
+        transform: scaleX(-1);
+    }
+    .flechaIzq, .flechaDrch{
+        background-color: beige;
+        width: 5%;
+        height: 5vh;
+        align-content: center;
+        font-size: larger;
+        font-weight: bolder;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+    .post{
+        width: 20%;
+        background-color: #FF6347;
+    }
+    .fila{
+        display:inline-flex;
+        width: 95%;
+        margin: 1rem auto;
+        overflow: hidden;
+    }
+    .contenedorConocimientos{
+        display: flex;
+        width: 90%;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+    }
+
+}
+/*PARA COMPUTADORAS*/
+@media all and (min-width: 1200px){
+    #presentacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    #presentacion figure{
+        width: 20%;
+        height: 30vh;
+        margin: 0 1rem;
+        overflow: hidden;
+    }
+    #presentacion section{
+        width: 60%;
+    }
+    #presentacion figure img{
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    #presentacion a{
+        width: 25%;
+        padding: 0.5rem;
+        text-align: center;
+        margin: 1rem auto;
+    }
+    #contenedorProyectos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .proyecto{
+        width: 40%;
+    }
+}

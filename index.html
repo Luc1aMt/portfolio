@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Lucia Ailen Martinez">
+    <meta name="description" content="Portfolio">
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="fuente/style.css">
+    <title>Porfolio</title>
+</head>
+<body>
+    <!--el usuario hará click en las banderas para cambiar al idioma de preferencia-->
+    <section id="cambiarIdioma">
+        <p>Idioma:
+            <span class="icon-reinounido"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span></span>
+            <span class="icon-espana"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span><span class="path15"></span><span class="path16"></span><span class="path17"></span><span class="path18"></span><span class="path19"></span><span class="path20"></span><span class="path21"></span><span class="path22"></span><span class="path23"></span><span class="path24"></span><span class="path25"></span><span class="path26"></span><span class="path27"></span><span class="path28"></span><span class="path29"></span><span class="path30"></span><span class="path31"></span><span class="path32"></span><span class="path33"></span><span class="path34"></span><span class="path35"></span><span class="path36"></span><span class="path37"></span><span class="path38"></span><span class="path39"></span><span class="path40"></span></span>
+        </p>
+    </section>
+    <!--nubes-->
+    <section class="nube"></section>
+    <section class="nube2"></section>
+    
+    <!--==============================================-->
+    <!--seccion principal-->
+    <!--==============================================-->
+    <section class="contenido">
+    <main>
+        <article id="presentacion">
+            <figure><img src="https://i.pinimg.com/736x/bc/63/81/bc638189002d945dddf6b0c04f859c74.jpg" alt="foto de la programadora"></figure>
+            <section>
+                <h2>¡Bienvenido!</h2>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eveniet possimus velit, molestias ab magni ducimus natus ea animi similique eos quidem consectetur autem fugit atque esse cupiditate corporis quia sint.</p>
+                <a download title="Curriculum_vitae" href="">Descargar CV</a>
+            </section>
+        </article>
+        <!--==============================================-->
+        <!--conocimientos-->
+        <!--==============================================-->
+        <article class="conocimientos">
+            <h2>Tengo conocimientos en: <span>◘</span> <span>◘</span></h2>
+            <section class="fila">
+            <button class="flechaIzq" onclick="mover(-1)">></button>
+            <section class="contenedorConocimientos">
+                <section class="diapositiva">
+                    <section class="post"><p>HTML</p></section>
+                    <section class="post"><p>CSS</p></section>
+                    <section class="post"><p>Javascript</p></section>
+                    <section class="post"><p>Php</p></section>
+                </section>
+                <section class="diapositiva">
+                    <section class="post"><p>Wordpress</p></section>
+                    <section class="post"><p>Figma</p></section>
+                </section>
+            </section>
+            <button class="flechaDrch" onclick="mover(1)">></button></section>
+        </article>
+        <!--==============================================-->
+        <!--certificaciones-->
+        <!--==============================================-->
+        <section>
+            <article>
+                <h2>Certificaciones que obtuve:</h2>
+            </article>
+        </section>
+        <!--==============================================-->
+        <!--proyectos-->
+        <!--==============================================-->
+        <section id="misProyectos">
+            <h2>Mis proyectos</h2>
+            <section id="contenedorProyectos">
+                <article class="proyecto">
+                    <figure><a href=""><img src="https://i.pinimg.com/736x/d4/81/53/d481538819f9681206a5ab9deee1025e.jpg" alt="imagen proyecto 1"></a></figure>
+                    <section>
+                        <h3>Proyecto 1 <span class="like">♡</span></h3>
+                        <p>Descripcion</p>
+                        <h4>Tecnologías usadas:</h4>
+                        <p>Php, Bootstrap</p>
+                    </section>
+                </article>
+                </article>
+            </section>
+        </section>
+    </main><section class="nube3 nubemueve2"></section></section>
+    <footer>
+        <h2>¡Gracias por llegar hasta aquí!</h2>
+        <p>Si te gustó mi trabajo y quisieras trabajar conmigo haz click en la imagen de abajo.</p>
+        <a href="#">Correo</a>
+    </footer>
+</body>
+<script>
+    const flechaIzquierda= document.querySelectorAll('.flechaIzq');
+    const flechaDerecha= document.querySelectorAll('.flechaDrch');
+    let diapoActual=0;
+    function mover(flecha) {
+        let diapositiva= querySelectorAll('.diapositiva');
+        let cantDiapo= diapositiva.lenght; 
+        let diapoActual= (diapoActual+flecha+cantDiapo)%cantDiapo;
+        const contenedor=document.querySelector('.contenedorConocimientos');
+        diapositiva.style.transform = 'translate(-'+diapoActual*100+'%)';
+
+        
+    }
+</script>
+</html>
